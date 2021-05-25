@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>MyBlog</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+</head>
+
+<body id="body">
+<div id="page" class="hfeed">
+    <header id="branding" role="banner">
+        <hgroup id="header-group">
+            <h1 id="site-title"><span><a href="./index.html" title="myblog" rel="home">MyBlog</a></span></h1>
+            <h2 id="site-desc">Welcome to my blog.</h2>
+        </hgroup>
+        <div id="search-bar">
+            <form method="get" id="search-form" action="./index.html">
+                <label for="s" class="assistive-text" id="search-text" style="font-family: arial;">Search</label>
+                <input type="text" class="field" name="s" id="s" placeholder="输入关键词  按Enter确定" width="24" maxlength="48">
+<!--                <input type="image" class="submit" name="submit" id="searchsubmit" alt="search" src="./search.svg" align="right">-->
+                <input type="button" id="search-btn" value="Search" >
+            </form>
+        </div>
+        <!-- BEGIN Menu-->
+        <div id="menu-container">
+            <div class="menu">
+                <ul id="ul-menu">
+                    <li><a href="./index.html" title="home">Home</a></li>
+                    <li><a href="./academic.php" title="Something about course and research">Academic</a></li>
+                    <li><a href="./life.php" title="Something about my life">Life</a></li>
+                    <li><a href="./tools.php" title="Useful Tools">Tools</a></li>
+                    <li><a href="./board.php" title="Something you want to say">Message</a></li>
+                    <li><a href="./about.html" title="Something about me">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- END Menu -->
+    </header>
+    <div id="roll-img">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/1.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/2.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/3.jpeg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div id="main-body">
+        <div id="left-container">
+            <p class="bar"><a href="./about.html">About Me</a></p>
+            <div id="left-content">
+                <img id="icon" src="icon.jpg">
+            </div>
+        </div>
+        <div id="right-container">
+            <p class="bar">Recent Posts</a></p>
+        </div>
+    </div>
+    <footer>
+        <p>
+            Copyright reserved<br>
+            Author:Zirui Ren, Bioinfo201801<br>
+            Huazhong Agricultural University, Wuhan, China, 430070
+        </p>
+    </footer>
+</div>
+<script src="bootstrap/js/bootstrap.js"></script>
+
+</body>
