@@ -1,41 +1,24 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>MyBlog</title>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 </head>
 
 <body id="body">
 <div id="page" class="hfeed">
-    <header id="branding" role="banner">
-        <hgroup id="header-group">
-            <h1 id="site-title"><span><a href="./index.html" title="myblog" rel="home">MyBlog</a></span></h1>
-            <h2 id="site-desc">Welcome to my blog.</h2>
-        </hgroup>
-        <div id="search-bar">
-            <form method="get" id="search-form" action="./index.html">
-                <label for="s" class="assistive-text" id="search-text" style="font-family: arial;">Search</label>
-                <input type="text" class="field" name="s" id="s" placeholder="输入关键词  按Enter确定" width="24" maxlength="48">
-<!--                <input type="image" class="submit" name="submit" id="searchsubmit" alt="search" src="./search.svg" align="right">-->
-                <input type="button" id="search-btn" value="Search" >
-            </form>
-        </div>
-        <!-- BEGIN Menu-->
-        <div id="menu-container">
-            <div class="menu">
-                <ul id="ul-menu">
-                    <li><a href="./index.html" title="home">Home</a></li>
-                    <li><a href="./academic.php" title="Something about course and research">Academic</a></li>
-                    <li><a href="./life.php" title="Something about my life">Life</a></li>
-                    <li><a href="./tools.php" title="Useful Tools">Tools</a></li>
-                    <li><a href="./board.php" title="Something you want to say">Message</a></li>
-                    <li><a href="./about.html" title="Something about me">About</a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- END Menu -->
-    </header>
+    <?php
+    include "./header.html"
+    ?>
+    <div id="search-bar">
+        <form method="get" id="search-form" action="index.php">
+            <label for="s" class="assistive-text" id="search-text" style="font-family: arial;">Search</label>
+            <input type="text" class="field" name="s" id="s" placeholder="Input Keywords to Search" width="24" maxlength="48">
+            <!--                <input type="image" class="submit" name="submit" id="searchsubmit" alt="search" src="./search.svg" align="right">-->
+            <input type="button" id="search-btn" value="Search" >
+        </form>
+    </div>
     <div id="roll-img">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -66,22 +49,36 @@
     </div>
     <div id="main-body">
         <div id="left-container">
-            <p class="bar"><a href="./about.html">About Me</a></p>
             <div id="left-content">
+                <p class="bar"><a href="about.php">About Me</a></p>
                 <img id="icon" src="icon.jpg">
+                <ul>
+                    <li>NAME</li>
+                    <li>Zirui Ren</li>
+                    <li>MAJOR</li>
+                    <li>bioinformatics</li>
+                    <li>MAIL</li>
+                    <li><a href="mailto:alexrenzr@gmail.com">alexrenzr@gmail.com</a></li>
+                    <li>TEL</li>
+                    <li>(+86)11345671123</li>
+                </ul>
+            </div>
+            <div id="left-content2">
+                <p class="bar"><a href="tools.php">Tools</a></p>
+
+
             </div>
         </div>
         <div id="right-container">
             <p class="bar">Recent Posts</a></p>
+            <?php
+            include "articlelist.php";
+            ?>
         </div>
     </div>
-    <footer>
-        <p>
-            Copyright reserved<br>
-            Author:Zirui Ren, Bioinfo201801<br>
-            Huazhong Agricultural University, Wuhan, China, 430070
-        </p>
-    </footer>
+    <?php
+    include "./footer.html";
+    ?>
 </div>
 <script src="bootstrap/js/bootstrap.js"></script>
 

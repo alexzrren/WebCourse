@@ -1,0 +1,47 @@
+html{
+    font-size: 16px;
+}
+body{
+    background-color: lightsteelblue;
+}
+
+h2{
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: #0a0a0a 2.5px solid;
+    margin-bottom: 60px
+}
+
+form{
+    position: relative;
+}
+#submit{
+    width: 300px;
+}
+
+.tips{
+    font-size: 15px;
+    font-weight: 700;
+}
+.container-other{
+    width: 18.75rem;
+    margin: auto;
+    text-align: center;
+}
+
+.container-other>div>span:first-child{
+    font-size: medium;
+}
+.container-other>div>span>a{
+    color: rgb(41, 41, 182);
+}
+.password-error{
+    /* visibility: hidden;*/
+    position: absolute;
+    right: -8.625rem;
+    top: 16.75rem;
+    color: red;
+}
+.form-signin input{
+    border-radius: 0;
+}

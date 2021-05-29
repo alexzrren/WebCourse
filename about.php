@@ -15,7 +15,6 @@
       include "header.html"
       ?>
   </header>
-    <h1 style="margin-top: 50px; margin-bottom: 50px; font-size: 40px; text-align: center">Still Constructing...</h1>
   <footer>
       <?php
       include "footer.html"

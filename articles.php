@@ -12,13 +12,18 @@
 <div id="page" class="hfeed">
   <header id="branding" role="banner">
       <?php
-      include "header.html"
+      include "./header.html"
       ?>
   </header>
-    <h1 style="margin-top: 50px; margin-bottom: 50px; font-size: 40px; text-align: center">Still Constructing...</h1>
+    <main style="height: 600px">
+        <?php
+        include "articlelist.php"
+        ?>
+    </main>
+
   <footer>
       <?php
-      include "footer.html"
+      include "./footer.html"
       ?>
   </footer>
 </div>
