@@ -12,30 +12,26 @@
     include "./header.html"
 
     ?>
-    <main style="padding:30px 60px 20px">
+    <main style="padding:10px 60px 20px">
         <?php
-        $art_name = './' . $_GET['article'] . '.txt';
+        $art_name = './' . $_GET['article'] ;
         $fp = fopen("$art_name", 'r');
         $title = fgets($fp);
-        ?>
-        <h1 style="text-align: center"><?php echo "$title";?></h1>
-        <?php
-            $date = fgets($fp);
-            ?>
-        <p style="text-align: center"><?php echo "$date";?></p>
-        <?php
-            while(!feof($fp)){
-                $cont = fgets($fp);
-                if(feof($fp)) {break;}
-                $cont = str_replace('\n', '', $cont);
-                ?>
-            <p style="text-indent: 2em;"><?php echo "$cont";?></p>
-        <?php
+        echo '<div id="article-navi">';
+        echo '<p>Location&nbsp;&nbsp;&nbsp;<a href="../index.php">Homepage</a>><a href="../articles.php">Articles</a>>',$title,'</p>';
+        echo '</div>';
+        echo '<h1 style="text-align: center">',$title,'</h1>';
+        $date = fgets($fp);
+        echo '<p style="text-align: right; padding-right: 20px;">Date : ',$date,'</p>';
+        while(!feof($fp)){
+            $cont = fgets($fp);
+            if(feof($fp)) {break;}
+            $cont = str_replace('\n', '', $cont);
+            echo '<p style="text-indent: 2em;">',$cont,'</p>';
             }
             fclose($fp);
             unset($fp);
         ?>
-
     </main>
     <?php
     include "../footer.html"

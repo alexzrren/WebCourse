@@ -22,48 +22,16 @@
         <div></div>
     </div>
     <div class="m-content">
-        <div class="m-imgbox">
-            <div class="m-img"><a href=""><img src="./photo/cover/nophoto.jpg" alt="No Photo"></a></div>
-            <div class="m-img-info">
-                <a href="">Album<span id="m-img-counts">0</span></a>
-            </div>
-        </div>
-        <div class="m-imgbox">
-            <div class="m-img"><a href=""><img src="./photo/cover/nophoto.jpg" alt="No Photo"></a></div>
-            <div class="m-img-info">
-                <a href="">Album<span id="m-img-counts">0</span></a>
-            </div>
-        </div>
-        <div class="m-imgbox">
-            <div class="m-img"><a href=""><img src="./photo/cover/nophoto.jpg" alt="No Photo"></a></div>
-            <div class="m-img-info">
-                <a href="">Album<span id="m-img-counts">0</span></a>
-            </div>
-        </div>
-        <div class="m-imgbox">
-            <div class="m-img"><a href=""><img src="./photo/cover/nophoto.jpg" alt="No Photo"></a></div>
-            <div class="m-img-info">
-                <a href="">Album<span id="m-img-counts">0</span></a>
-            </div>
-        </div>
-        <div class="m-imgbox">
-            <div class="m-img"><a href=""><img src="./photo/cover/nophoto.jpg" alt="No Photo"></a></div>
-            <div class="m-img-info">
-                <a href="">Album<span id="m-img-counts">0</span></a>
-            </div>
-        </div>
-        <div class="m-imgbox">
-            <div class="m-img"><a href=""><img src="./photo/cover/nophoto.jpg" alt="No Photo"></a></div>
-            <div class="m-img-info">
-                <a href="">Album<span id="m-img-counts">0</span></a>
-            </div>
-        </div>
-        <div class="m-imgbox">
-            <div class="m-img"><a href=""><img src="./photo/cover/nophoto.jpg" alt="No Photo"></a></div>
-            <div class="m-img-info">
-                <a href="">Album<span id="m-img-counts">0</span></a>
-            </div>
-        </div>
+        <?php
+            for ($i=0;$i<8;$i++) {
+                echo '<div class="m-imgbox">';
+                echo '<div class="m-img"><a href=""><img src="./photo/cover/nophoto.jpg" alt="No Photo"></a></div>';
+                echo '<div class="m-img-info">';
+                echo '<a href="">Album-0',$i,'<span id="m-img-counts">0</span></a>';
+                echo '</div>';
+                echo '</div>';
+            }
+        ?>
     </div>
   </header>
   <footer>

@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>MyBlog</title>
+    <!--bootstrap样式表用于支持轮播图运行，引用自网络-->
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 </head>
 
@@ -19,34 +20,10 @@
             <input type="button" id="search-btn" value="Search" >
         </form>
     </div>
-    <div id="roll-img">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/1.jpeg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/2.jpeg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="img/3.jpeg" class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
+    <?php
+//    roll-img.html中轮播图内容引用自互联网，非原创
+    include "./roll-img.html"
+    ?>
     <div id="main-body">
         <div id="left-container">
             <div id="left-content">
@@ -60,7 +37,7 @@
                     <li>MAIL</li>
                     <li><a href="mailto:alexrenzr@gmail.com">alexrenzr@gmail.com</a></li>
                     <li>TEL</li>
-                    <li>(+86)11345671123</li>
+                    <li>(+86)123****1234</li>
                 </ul>
             </div>
             <div id="left-content2">
@@ -80,6 +57,6 @@
     include "./footer.html";
     ?>
 </div>
+<!--下方bootstrap脚本用于支持轮播图运行-->
 <script src="bootstrap/js/bootstrap.js"></script>
-
 </body>

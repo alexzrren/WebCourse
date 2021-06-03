@@ -261,3 +261,15 @@ footer{
     font-size: small;
     color: gray;
 }
+#article-navi{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px gray solid;
+}
+#article-navi a{
+    text-decoration: none;
+}
+#article-navi p{
+    font-weight: bold;
+}

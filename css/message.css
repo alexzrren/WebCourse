@@ -1,0 +1,36 @@
+#input-area{
+    box-sizing: border-box;
+}
+
+#input-msg{
+    margin-right: 153px;
+}
+
+#input-username{
+    /*margin-left: 153px;*/
+}
+
+#msg-form{
+    padding-left: 153px;
+    border-bottom: 3px lightgrey solid;
+}
+
+#msg-form div{
+    padding-bottom: 15px;
+}
+
+.msg-btn{
+    width: 75px;
+}
+
+.msg-container{
+    border-bottom: 1px #7a7a7a dashed;
+    margin: 20px 80px 20px 80px;
+}
+
+#msg-info{
+    color: dimgrey;
+    font-size: 10px;
+    text-align: right;
+
+}
