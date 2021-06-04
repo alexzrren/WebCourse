@@ -16,15 +16,16 @@
       include "header.html"
       ?>
   </header>
-    <form id="msg-form">
+    <!--  提交留言(允许匿名，但是必须输入用户名)  -->
+    <form id="msg-form" method="post" action="message-submit.php" name="msgform"enctype="multipart/form-data" onsubmit="return check()">
         <div style="height: 10px"></div>
         <span style="margin-top: 15px; border-bottom: 3px #0a0a0a solid; font-size: 20px; font-weight: bold">Message Box</span>
-        <textarea id="input-msg" rows="5" cols="70">Something you want to say to me~</textarea>
+        <textarea id="input-msg" name="message" rows="5" cols="70" placeholder="Something you want to say to me~"></textarea>
         <div>
             <span>Username</span>
-            <span><input id="input-username" type="text" maxlength="20" style="margin-right: 15px;"></span>
+            <span><input id="input-username" name="username" type="text" maxlength="20" style="margin-right: 15px;"></span>
             <span style="margin-right: 15px">
-                <input id="anonymous-ckb" type="checkbox" name="anonymous" value="Anonymous" title="Your username will not be visible.">
+                <input id="anonymous-ckb" type="checkbox" name="anonymous[]" value="1" title="Your username will not be visible.">
                 Anonymous
             </span>
             <span style="margin-right: 10px">
@@ -32,45 +33,80 @@
                     document.getElementById('input-msg').value='';
                     document.getElementById('input-username').value='';">
             </span>
-            <span><input type="button" id="submit-btn" class="msg-btn" value="Submit"></span>
+            <span><input type="submit" id="submit-btn" class="msg-btn" value="Submit"></span>
+            <script>
+                // 表单非空检查，JavaScript代码参考自互联网
+                function check() {
+                    let content=document.msgform.message.value;
+                    if (content == "" || content.length == 0) {
+                        alert("Message cannot be empty!");
+                        document.msgform.message.focus(); //focus on empty input
+                        return false;
+                    }
+                    let username=document.msgform.username.value;
+                    if (username == "" || username.length == 0) {
+                        alert("Username cannot be empty!");
+                        document.msgform.username.focus();
+                        return false;
+                    } else {
+                        return true;
+                    }
+                }
+            </script>
         </div>
+        <p style="font-size: 10px; color: grey">* Username cannot be empty even if you choose anonymous. It will be invisible and only saved for database record.</p>
     </form>
     <div style="height: 10px;"></div>
+    <!--显示数据库中的留言信息-->
     <div id="show-msg">
-        <div class="msg-container">
-            <p id="msg-content">We used to look up at the sky and wonder at our place in the stars, now we just look down and worry about our place in the dirt.</p>
-            <p id="msg-info">EXAMPLE USERNAME 2021-06-01 13:48:55</p>
-        </div>
+        <?php
+        $link = mysqli_connect("127.0.0.1","root", "Bioinfo@2021", "webserver","33306")
+        /* check connection */
+        or die("Database connect failure");
+        mysqli_query($link, "set names UTF8");
+        $sql = 'select * from comment order by id desc';
+        $result = mysqli_query($link, $sql);
+        $rows =mysqli_num_rows($result);
+        $pagesize=10;
+        $pagecount=ceil($rows/$pagesize);
+        if (!isset($_GET['pageno'])){
+            $pageno=1;
+        }
+        else{
+            $pageno=$_GET['pageno'];
+        }
+        if($pageno>$pagecount){
+            $pageno=$pagecount;
+        }
+        $offset=($pageno-1)*$pagesize;
+        mysqli_data_seek($result,$offset);
+        $i=0;
+        while($row=mysqli_fetch_object($result)){
+            echo '<div class="msg-container">';
+            echo '<p id="msg-content">',$row->content,'</p>';
+            if($row->anonymous){
+                echo '<p id="msg-info">ANONYMOUS','  ',$row->sub_date,'</p>';
+            }
+            else{
+                echo '<p id="msg-info">',$row->user,'  ',$row->sub_date,'</p>';
+            }
+            echo '</div>';
+            $i=$i+1;
+            if ($i==$pagesize) {
+                break;
+            }
+        }
+        mysqli_free_result($result);
+        mysqli_close($link);
+        ?>
+    <div id="page-navi">
+        <?php
+            echo '<span>[Page ',$pageno,'/',$pagecount,']</span>';
+            for($i=1;$i<=$pagecount;$i++){
+                echo '<span style="padding: 0 2px 0;"><a href="./message.php?pageno=',$i,'">',$i,'</a></span>';
+            }
+        ?>
     </div>
-    <div id="show-msg">
-        <div class="msg-container">
-            <p id="msg-content"> I don't think that when people grow up, they will become more broad-minded and can accept everything. Conversely, I think it's a selecting process, knowing what's the most important and what's the least. And then be a simple man.</p>
-            <p id="msg-info">EXAMPLE USERNAME 2021-06-01 13:48:55</p>
-        </div>
-    </div><div id="show-msg">
-        <div class="msg-container">
-            <p id="msg-content">Death is just a part of life, something we’re all destined to do.</p>
-            <p id="msg-info">EXAMPLE USERNAME 2021-06-01 13:48:55</p>
-        </div>
-    </div><div id="show-msg">
-        <div class="msg-container">
-            <p id="msg-content">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-            <p id="msg-info">EXAMPLE USERNAME 2021-06-01 13:48:55</p>
-        </div>
-    </div><div id="show-msg">
-        <div class="msg-container">
-            <p id="msg-content">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-            <p id="msg-info">EXAMPLE USERNAME 2021-06-01 13:48:55</p>
-        </div>
-    </div><div id="show-msg">
-        <div class="msg-container">
-            <p id="msg-content">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-            <p id="msg-info">EXAMPLE USERNAME 2021-06-01 13:48:55</p>
-        </div>
-    </div>
-
-
-
   <footer>
       <?php
       include "footer.html"

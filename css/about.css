@@ -1,0 +1,20 @@
+#sign-bar{
+    margin: 0 80px 20px 80px;
+    border-bottom: 1px #0a53be solid;
+}
+#photo-container {
+    float: left;
+    width: 38%;
+    height: 215px;
+    margin-left: 80px;
+    padding: 10px;
+}
+#photo-container img{
+    height: auto;
+}
+#info-container{
+    float: right;
+    width: 60%;
+    height: 20px;
+    margin-right: 80px;
+}

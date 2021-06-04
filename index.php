@@ -28,7 +28,7 @@
         <div id="left-container">
             <div id="left-content">
                 <p class="bar"><a href="about.php">About Me</a></p>
-                <img id="icon" src="icon.jpg">
+                <img id="icon" src="img/icon.jpg">
                 <ul>
                     <li>NAME</li>
                     <li>Zirui Ren</li>
