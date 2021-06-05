@@ -13,7 +13,7 @@
 <div id="page" class="hfeed">
   <header id="branding" role="banner">
       <?php
-      include "header.html"
+      include "header.php"
       ?>
     </div>
 <div class="m-container">

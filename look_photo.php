@@ -12,7 +12,7 @@
 <div id="page" class="hfeed">
     <header id="branding" role="banner">
         <?php
-        include "header.html"
+        include "header.php"
         ?>
 </div>
 <!--用于查看单张照片-->

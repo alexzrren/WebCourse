@@ -10,7 +10,7 @@
 <body id="body">
 <div id="page" class="hfeed">
     <?php
-    include "./header.html"
+    include "./header.php"
     ?>
     <div id="search-bar">
         <form method="get" id="search-form" action="index.php">

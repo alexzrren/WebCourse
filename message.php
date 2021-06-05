@@ -13,7 +13,7 @@
 <div id="page" class="hfeed">
   <header id="branding" role="banner">
       <?php
-      include "header.html"
+      include "header.php"
       ?>
   </header>
     <!--  提交留言(允许匿名，但是必须输入用户名)  -->

@@ -12,7 +12,7 @@
 <div id="page" class="hfeed">
     <header id="branding" role="banner">
         <?php
-        include "header.html"
+        include "header.php"
         ?>
 </div>
 <!--用于显示相册中所含的照片，并显示其文件名-->

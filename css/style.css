@@ -31,6 +31,9 @@
     background:url("../img/headerbg.jpg");
     padding-left: 8px;
 }
+#login-bar>li{
+    color: ghostwhite;
+}
 #site-title{
     padding-top: 4px;
     font-family: Arial;
@@ -53,6 +56,9 @@
     font-size: 14px;
     padding-bottom: 16px;
     margin-bottom: 0;
+}
+#site-desc>a{
+    color: #0dcaf0;
 }
 #search-bar{
     padding-bottom: 1em;
@@ -272,4 +278,47 @@ footer{
 }
 #article-navi p{
     font-weight: bold;
+}
+#control-menu{
+    float: left;
+    width: 22%;
+    height: 100%;
+    background-color: lightblue;
+}
+#control-menu>ul{
+    padding: 0 0 0 0;
+}
+#control-menu>ul>li{
+    padding: 5px 0 5px;
+    border: 2px #002EB8 solid;
+    background-color: #86b7fe;
+    list-style-type: none;
+    text-align: center;
+}
+#control-menu>ul>li>a{
+    text-decoration: none;
+}
+.selected>a{
+    color: ghostwhite;
+    text-decoration: none;
+}
+#sys-name{
+    margin: 0 0px 10px 10px;
+    border-bottom: 1px #0a53be solid;
+}
+#control-sys{
+    float: right;
+    width: 77%;
+    position: relative;
+}
+table{
+    text-align: center;
+    border-collapse:collapse;
+    margin-bottom: 20px;
+}
+table tr{
+    border-bottom: 1px black solid;
+}
+table tr th{
+    padding: 2px 10px 2px;
 }

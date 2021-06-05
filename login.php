@@ -17,20 +17,13 @@
 <body style="background-color: lightsteelblue">
 <div class="sign-in">
     <div class="container">
-        <form class="form-signin">
+        <form class="form-signin" action="./login_check.php" method="post">
             <h2 class="form-signin-heading" style="text-align: center; padding-bottom: 5px; border-bottom: #0a0a0a 2.5px solid; margin-bottom: 40px">LOGIN</h2>
-            <label for="inputEmail" class="sr-only">Username</label>
-            <input type="text"
-                   id="inputEmail"
-                   class="form-control"
-                   placeholder="Username"
-                   style="border-radius: 0"
-                   required autofocus >
+            <input type="text" id="inputEmail" class="form-control" placeholder="Username" style="border-radius: 0" name="username" required autofocus >
             <br>
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" style="border-radius: 0" required>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" style="border-radius: 0" name="password" required>
             <div style="height: 20px"></div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit" style="border-radius: 0">Login</button>
+            <button type="submit" class="btn btn-lg btn-primary btn-block" style="border-radius: 0">Login</button>
         </form>
         <div style="width: 300px; margin:auto">
             <a href="register.php" style="text-decoration: none;">

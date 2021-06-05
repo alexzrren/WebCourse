@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MyBloc</title>
+    <title>MyBlog</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/about.css">
@@ -13,7 +13,7 @@
 <div id="page" class="hfeed">
   <header id="branding" role="banner">
       <?php
-      include "header.html"
+      include "header.php"
       ?>
   </header>
     <div id="contact" style="overflow: hidden;">
@@ -26,7 +26,7 @@
         <div id="info-container">
             <ul style="margin-top: 15px;">
                 <li><span class="title">NAME : </span><span class="content">Zirui Ren 任梓睿</span></li>
-                <li><span class="title">BIRTHDAY : </span><span class="content">March 7th</span></li>
+                <li><span class="title">BIRTHDAY : </span><span class="content">March 7th, 2000</span></li>
                 <li><span class="title">LOCATION : </span><span class="content">Wuhan, Hubei Province, China</span></li>
                 <li><span class="title">SCHOOL : </span><span class="content">College of Informatics, HZAU</span></li>
                 <li><span class="title">MAJOR FIELD : </span><span class="content">Bioinformatics</span></li>

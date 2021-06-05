@@ -1,7 +1,20 @@
 <header id="branding" role="banner">
   <div>
     <ul id="login-bar">
-      <li><a href="./login.php" title="Login" style="text-decoration: none;">LOGIN</a></li>
+        <?php
+        session_start();
+            if(isset($_SESSION['username'])){
+                if(!$_SESSION['admin']){
+                    echo '<li><span>Login as:&nbsp;[USER]&nbsp;',$_SESSION['username'],'</span><span style="margin-left: 8px;"><a href="logout.php">LOGOUT</a></span></li>';
+                }
+                else{
+                    echo '<li><span>Login as:&nbsp;[ADMIN]&nbsp;',$_SESSION['username'],'</span><span style="margin-left: 8px;"><a href="logout.php">LOGOUT</a></span></li>';
+                }
+            }
+            else{
+                echo '<li><a href="./login.php" title="Login" style="text-decoration: none;">LOGIN</a></li>';
+            }
+        ?>
 <!--      <li><a href="./register.php" title="Register" style="text-decoration: none;">Register</a></li>-->
     </ul>
   </div>
@@ -19,6 +32,12 @@
         <li><a href="./tools.php" title="Useful Tools">Tools</a></li>
         <li><a href="message.php" title="Something you want to say">Message</a></li>
         <li><a href="about.php" title="Something about me">About</a></li>
+          <?php
+          if(isset($_SESSION['username'])&&$_SESSION['admin'])
+          {
+              echo '<li><a href="management.php" title="Admin Management">Control Center</a></li>';
+          }
+          ?>
       </ul>
     </div>
   </div>
