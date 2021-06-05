@@ -99,17 +99,39 @@
         mysqli_free_result($result);
         mysqli_close($link);
         ?>
-    <div id="page-navi">
+    <div id="page-navi" style="display: flex">
         <?php
-            echo '<span>[Page ',$pageno,'/',$pagecount,']</span>';
-            for($i=1;$i<=$pagecount;$i++){
-                echo '<span style="padding: 0 2px 0;"><a href="./message.php?pageno=',$i,'">',$i,'</a></span>';
+            echo '<div id="prev-pg">';
+            if($pageno!=1){
+                echo '<span align="left"><a href="./message.php?pageno=',$pageno-1,'">&lt;Previous Page</a></span>';
             }
+            else{
+                echo'<span style="color: #909090">&lt;Previous Page</span>';
+            }
+            echo '</div><div id="pg_slec" style="margin: auto"><span>[ Page ',$pageno,' / ',$pagecount,' ] </span>';
+            for($i=1;$i<=$pagecount;$i++){
+                if($i==$pageno){
+                    echo '<span>',$i,'</span>';
+                }
+                else{
+                    echo '<span style="padding: 0 2px 0;"><a href="./message.php?pageno=',$i,'">',$i,'</a></span>';
+                }
+
+            }
+            echo '<span> [ ',$rows,' messages in total ]</span>';
+            echo '</div><div id="next-pg">';
+            if($pageno!=$pagecount){
+                echo '<span align="right"><a href="./message.php?pageno=',$pageno+1,'">Next Page&gt;</a></span>';
+            }
+            else{
+                echo '<span style="color: #909090; text-align: right;">Next Page&gt;</span>';
+            }
+            echo '</div>';
         ?>
     </div>
   <footer>
       <?php
-      include "footer.html"
+      include "footer.html";
       ?>
   </footer>
 </div>

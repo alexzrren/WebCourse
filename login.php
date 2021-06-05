@@ -19,21 +19,17 @@
     <div class="container">
         <form class="form-signin">
             <h2 class="form-signin-heading" style="text-align: center; padding-bottom: 5px; border-bottom: #0a0a0a 2.5px solid; margin-bottom: 40px">LOGIN</h2>
-            <label for="inputEmail" class="sr-only">Email address</label>
-            <input type="email"
+            <label for="inputEmail" class="sr-only">Username</label>
+            <input type="text"
                    id="inputEmail"
                    class="form-control"
-                   placeholder="Email address"
+                   placeholder="Username"
                    style="border-radius: 0"
                    required autofocus >
             <br>
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" style="border-radius: 0" required>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
-            </div>
+            <div style="height: 20px"></div>
             <button class="btn btn-lg btn-primary btn-block" type="submit" style="border-radius: 0">Login</button>
         </form>
         <div style="width: 300px; margin:auto">
@@ -60,5 +56,4 @@ include "footer.html"
 ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.8/assets/js/ie10-viewport-bug-workaround.js"></script>
-
 </html>

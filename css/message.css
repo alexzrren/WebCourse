@@ -37,3 +37,15 @@
 #page-navi{
     margin: auto;
 }
+#page-navi{
+    padding: 20px 80px 20px;
+}
+#pg_slec{
+    text-align: center;
+}
+#prev-pg span a{
+    text-decoration: none;
+}
+#next-pg span a{
+    text-decoration: none;
+}

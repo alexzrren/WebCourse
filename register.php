@@ -21,13 +21,13 @@
         <form class="form-signin" method="post">
             <h2 class="form-signin-heading">REGISTER</h2>
 
-            <span class="tips">Email address</span>
-            <label for="inputEmail" class="sr-only">Email</label>
-            <input type="email"
+            <span class="tips">Username</span>
+            <label for="inputEmail" class="sr-only">Username</label>
+            <input type="text"
                    id="inputEmail"
-                   name="email"
+                   name="username"
                    class="form-control"
-                   placeholder="Email address"
+                   placeholder="Username"
                    style="margin-bottom: 10px"
                    required autofocus>
             <span class="tips">Password</span>

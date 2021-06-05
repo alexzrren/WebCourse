@@ -4,8 +4,8 @@
 }
 #photo-container {
     float: left;
-    width: 38%;
-    height: 215px;
+    width: 35%;
+    height: 224px;
     margin-left: 80px;
     padding: 10px;
 }
@@ -14,7 +14,21 @@
 }
 #info-container{
     float: right;
-    width: 60%;
+    width: 46%;
     height: 20px;
     margin-right: 80px;
+}
+#info-container>ul>li{
+    margin: 3px 0 3px;
+}
+#info-container>ul{
+    color: #0a53be;
+}
+.title{
+    color: #0a53be;
+    font-weight: bold;
+}
+.content{
+    color: black;
+    text-align: right;
 }

@@ -43,7 +43,6 @@
             <div id="left-content2">
                 <p class="bar"><a href="tools.php">Tools</a></p>
 
-
             </div>
         </div>
         <div id="right-container">
