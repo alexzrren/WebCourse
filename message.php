@@ -60,7 +60,8 @@
     <!--显示数据库中的留言信息-->
     <div id="show-msg">
         <?php
-        $link = mysqli_connect("127.0.0.1","root", "Bioinfo@2021", "webserver","33306")
+        //使用了云服务器上搭建的数据库
+        $link = mysqli_connect("47.100.93.151","root", "Bioinfo@2021", "webserver","3306")
         /* check connection */
         or die("Database connect failure");
         mysqli_query($link, "set names UTF8");

@@ -15,6 +15,7 @@
         include "header.html"
         ?>
 </div>
+<!--用于显示相册中所含的照片，并显示其文件名-->
 <div class="m-container">
     <div class="m-top">
         <div><a href="photo.php">My Albums</a><span style="font-size: 1rem; color: lightsteelblue">&gt;<?php echo $_GET['albumname'];?></span></div>

@@ -23,7 +23,7 @@
 
     ?>
 
-<!--下方计时器JavaScript代码引用自互联网-->
+<!--下方计时器JavaScript代码引用自互联网，功能：跳回留言板-->
 <script language="javascript">
         location.href = "<?php echo $url?>";
 </script>

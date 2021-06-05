@@ -15,6 +15,7 @@
         include "header.html"
         ?>
 </div>
+<!--用于查看单张照片-->
 <div class="m-container">
     <div class="m-top">
         <div>
