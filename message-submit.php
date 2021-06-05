@@ -9,7 +9,7 @@
         $anonymous=0;
     }
     $currtime=date("Y-m-d H:i:s");
-    $link=mysqli_connect('127.0.0.1','root','Bioinfo@2021','webserver','33306')
+    $link=mysqli_connect('47.100.93.151','root','Bioinfo@2021','webserver','3306')
     or die('Database Connection Failure, Please contact Admin');
     mysqli_query($link,'set names UTF8');
     if($anonymous) {
