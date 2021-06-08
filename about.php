@@ -40,7 +40,7 @@
         <span style="border-bottom: 3px darkblue solid; font-size: 20px; font-weight: bold;">Find Me</span>
         <span style="font-size: 10px; color: gray; margin-left:5px">(powered by AutoNavi API)</span>
     </div>
-    <div id="map-container" style="height: 400px; width: 600px"></div>
+    <div id="map-container" style="height: 400px; width: 600px; margin:auto;"></div>
     <script src="https://webapi.amap.com/maps?v=1.4.15&key=213c1df2864c113cdc0b461779570c8d"></script>
     <script>
         var map = new AMap.Map('map-container', {

@@ -5,10 +5,10 @@
         session_start();
             if(isset($_SESSION['username'])){
                 if(!$_SESSION['admin']){
-                    echo '<li><span>Login as:&nbsp;[USER]&nbsp;',$_SESSION['username'],'</span><span style="margin-left: 8px;"><a href="logout.php">LOGOUT</a></span></li>';
+                    echo '<li><span style="color: whitesmoke;">Login as:&nbsp;[USER]&nbsp;',$_SESSION['username'],'</span><span style="margin-left: 8px;"><a href="logout.php">LOGOUT</a></span></li>';
                 }
                 else{
-                    echo '<li><span>Login as:&nbsp;[ADMIN]&nbsp;',$_SESSION['username'],'</span><span style="margin-left: 8px;"><a href="logout.php">LOGOUT</a></span></li>';
+                    echo '<li><span  style="color: whitesmoke;">Login as:&nbsp;[ADMIN]&nbsp;',$_SESSION['username'],'</span><span style="margin-left: 8px;"><a href="logout.php">LOGOUT</a></span></li>';
                 }
             }
             else{
