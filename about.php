@@ -9,7 +9,7 @@
     <title>MyBlog</title>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 </head>
-<body id="body">
+<body id="body" style="margin: auto;">
 <div id="page" class="hfeed">
   <header id="branding" role="banner">
       <?php
@@ -35,8 +35,24 @@
             </ul>
         </div>
     </div>
+    <!-- 学习高德地图API使用，参考自高德开放平台开发文档 -->
     <div id="sign-bar" style="margin-top: 20px;">
-        <span style="border-bottom: 3px darkblue solid; font-size: 20px; font-weight: bold;">Webpage Development Log</span>
+        <span style="border-bottom: 3px darkblue solid; font-size: 20px; font-weight: bold;">Find Me</span>
+        <span style="font-size: 10px; color: gray; margin-left:5px">(powered by AutoNavi API)</span>
+    </div>
+    <div id="map-container" style="height: 400px; width: 600px"></div>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=213c1df2864c113cdc0b461779570c8d"></script>
+    <script>
+        var map = new AMap.Map('map-container', {
+            resizeEnable: true,
+            zoom:14,
+            center: [114.351661, 30.473903],
+            lang: 'en',
+        });
+    </script>
+
+    <div id="sign-bar" style="margin-top: 20px;">
+        <span style="border-bottom: 3px darkblue solid; font-size: 20px; font-weight: bold;">Development Log</span>
     </div>
     <div id="dev-log" style="height: 350px; border: 3px #0c4128 solid">
         <h1>Development Log</h1>

@@ -20,10 +20,18 @@
     <form id="msg-form" method="post" action="message-submit.php" name="msgform"enctype="multipart/form-data" onsubmit="return check()">
         <div style="height: 10px"></div>
         <span style="margin-top: 15px; border-bottom: 3px #0a0a0a solid; font-size: 20px; font-weight: bold">Message Box</span>
-        <textarea id="input-msg" name="message" rows="5" cols="70" placeholder="Something you want to say to me~"></textarea>
+        <textarea id="input-msg" name="message" rows="5" cols="70" placeholder="Something you want to say to me~" autofocus required></textarea>
         <div>
             <span>Username</span>
-            <span><input id="input-username" name="username" type="text" maxlength="20" style="margin-right: 15px;"></span>
+            <?php
+             @session_start();
+             if(!isset($_SESSION['username'])){
+                echo '<span><input id="input-username" name="username" type="text" maxlength="20" style="margin-right: 15px;" required></span>';
+            }else{
+                 $username=$_SESSION['username'];
+                 echo '<span><input id="input-username" name="username" type="text" maxlength="20" readonly="readonly" style="margin-right: 15px;" value="',$username,'"></span>';
+             }
+            ?>
             <span style="margin-right: 15px">
                 <input id="anonymous-ckb" type="checkbox" name="anonymous[]" value="1" title="Your username will not be visible.">
                 Anonymous
@@ -34,27 +42,24 @@
                     document.getElementById('input-username').value='';">
             </span>
             <span><input type="submit" id="submit-btn" class="msg-btn" value="Submit"></span>
-            <script>
-                // 表单非空检查，JavaScript代码参考自互联网
-                function check() {
-                    let content=document.msgform.message.value;
-                    if (content == "" || content.length == 0) {
-                        alert("Message cannot be empty!");
-                        document.msgform.message.focus(); //focus on empty input
-                        return false;
-                    }
-                    let username=document.msgform.username.value;
-                    if (username == "" || username.length == 0) {
-                        alert("Username cannot be empty!");
-                        document.msgform.username.focus();
-                        return false;
-                    } else {
-                        return true;
-                    }
-                }
-            </script>
         </div>
-        <p style="font-size: 10px; color: grey">* Username cannot be empty even if you choose anonymous. It will be invisible and only saved for database record.</p>
+        <p style="color: grey; margin-bottom:0px; margin-top:15px">&lt;RULES OF MESSAGE&gt;</p>
+        <p style="font-size: 10px; color: grey; margin-bottom:0px">
+            * <span style="color: red;">Username cannot be empty</span>
+            even if you choose anonymous. It will be invisible and only saved for database record.
+        </p>
+        <p style="font-size: 10px; color: grey; margin-bottom:0px">
+            * <span style="color: red;">Without login,</span>
+            users from
+            <span style="color: red;">same IP</span>
+            is allowed to submit
+            <span style="color: red;">one message in 5 minutes.</span>
+        </p>
+        <p style="font-size: 10px; color: red; margin-top:0px">
+            <span style="color: grey;">*</span>
+            Any content of obscene, violence or discrimination will be DELETED by the Admin, and your IP will be BANNED
+
+        </p>
     </form>
     <div style="height: 10px;"></div>
     <!--显示数据库中的留言信息-->

@@ -16,6 +16,7 @@ form{
     position: relative;
 }
 #submit{
+    margin-top: 20px;
     width: 300px;
 }
 
@@ -42,6 +43,12 @@ form{
     top: 16.75rem;
     color: red;
 }
+.form-signin{
+    padding:15px 15px 10px
+}
 .form-signin input{
     border-radius: 0;
+}
+#send-mail{
+    margin-top: 10px;
 }

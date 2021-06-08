@@ -19,7 +19,7 @@
     <div class="container">
         <form class="form-signin" action="./login_check.php" method="post">
             <h2 class="form-signin-heading" style="text-align: center; padding-bottom: 5px; border-bottom: #0a0a0a 2.5px solid; margin-bottom: 40px">LOGIN</h2>
-            <input type="text" id="inputEmail" class="form-control" placeholder="Username" style="border-radius: 0" name="username" required autofocus >
+            <input type="text" id="inputUsername" class="form-control" placeholder="Username" style="border-radius: 0" name="username" required autofocus >
             <br>
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" style="border-radius: 0" name="password" required>
             <div style="height: 20px"></div>
