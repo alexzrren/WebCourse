@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <title>MyBlog</title>
-    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css">
 </head>
 
 <body id="body">
 <div id="page" class="hfeed">
     <?php
-    include "./header.html"
+    include "../header_footer/header.php"
 
     ?>
     <main style="padding:10px 60px 20px">
         <?php
-        $art_name = './' . $_GET['article'] ;
+        $art_name = '../../article/' . $_GET['article'] ;
         $fp = fopen("$art_name", 'r');
         $title = fgets($fp);
         echo '<div id="article-navi">';
-        echo '<p>Location&nbsp;&nbsp;&nbsp;<a href="../index.php">Homepage</a>><a href="../pages/article/articles.php">Articles</a>>',$title,'</p>';
+        echo '<p>Location&nbsp;&nbsp;&nbsp;<a href="../../index.php">Homepage</a>><a href="articles.php">Articles</a>>',$title,'</p>';
         echo '</div>';
         echo '<h1 style="text-align: center">',$title,'</h1>';
         $date = fgets($fp);
@@ -34,10 +34,10 @@
         ?>
     </main>
     <?php
-    include "../footer.html"
+    include "../header_footer/footer.html"
     ?>
 </div>
-<script src="../bootstrap/js/bootstrap.js"></script>
+<script src="../../bootstrap/js/bootstrap.js"></script>
 
 </body>
 

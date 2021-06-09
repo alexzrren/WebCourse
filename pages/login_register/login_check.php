@@ -14,7 +14,7 @@ $row=mysqli_fetch_array($result);
 if(mysqli_num_rows($result)==1){
     $_SESSION['username']=$row['username'];
     $_SESSION['admin']=$row['admin'];
-    header("refresh:5;url=index.php");
+    header("refresh:5;url=../../index.php");
 }
 else{
     echo "Username or Password Incorrect!";

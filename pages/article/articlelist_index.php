@@ -10,7 +10,7 @@
             echo '<div class="log-classify">学院新闻</div>';
             $fp = fopen("$filename", 'r');
             $title = fgets($fp);
-            echo '<div class="log-link"><a href="article/article_detail.php?article=',$file,'">',$title,'</a></div>';
+            echo '<div class="log-link"><a href="pages/article/article_detail.php?article=',$file,'">',$title,'</a></div>';
             $date = fgets($fp);
             echo '<div class="log-date">',$date,'</div>';
             echo'</div>';
