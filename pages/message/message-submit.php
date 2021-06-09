@@ -26,13 +26,13 @@
                 echo '<div id="submit-error" style="width: 880px; background-color: lightsteelblue; margin: auto; padding: 40px 0 40px">';
                 echo '<h1 style="text-align: center; color: red">MESSAGE SUBMISSION REJECTED</h1>';
                 echo '<h3 style="text-align: center;">User without login is allowed to submit one message in 5 minutes!</h3>';
-                echo '<h3 style="text-align: center;">Please <a href="login.php">log in</a> or wait for a while!</h3>';
+                echo '<h3 style="text-align: center;">Please <a href="../login_register/login.php">log in</a> or wait for a while!</h3>';
                 echo '<div style="margin: 40px auto 50px;">';
                 echo '<p style="margin-left: 10px">
                         <span style="font-weight: bold;">Last Submit: </span>',$row[0],'&nbsp;&nbsp;&nbsp;','
                         <span style="font-weight: bold;">From IP:</span>',$ip,'</p>';
                 echo '<p style="margin-left: 10px"><span style="font-weight: bold;">',300-$time_lapse,' seconds</span> for next available submit</p>';
-                echo '<h1 style="text-align: center;"><a href="message.php" style="margin-left: 10px;">RETURN</a></h1>' ;
+                echo '<h1 style="text-align: center;"><a href="message.php" style="margin-left: 10px;">RETURN</a></h1>';
                 exit;
             }
         }

@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <title>MyBlog</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/message.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/message.css">
     <title>MyBlog</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css">
 </head>
 <body id="body">
 <div id="page" class="hfeed">
   <header id="branding" role="banner">
       <?php
-      include "header.php"
+      include "../header_footer/header.php"
       ?>
   </header>
     <!--  提交留言(允许匿名，但是必须输入用户名)  -->
-    <form id="msg-form" method="post" action="message-submit.php" name="msgform"enctype="multipart/form-data" onsubmit="return check()">
+    <form id="msg-form" method="post" action="message-submit.php" name="msgform" enctype="multipart/form-data" onsubmit="return check()">
         <div style="height: 10px"></div>
         <span style="margin-top: 15px; border-bottom: 3px #0a0a0a solid; font-size: 20px; font-weight: bold">Message Box</span>
         <textarea id="input-msg" name="message" rows="5" cols="70" placeholder="Something you want to say to me~" autofocus required></textarea>
@@ -109,7 +109,7 @@
         <?php
             echo '<div id="prev-pg">';
             if($pageno!=1){
-                echo '<span align="left"><a href="./message.php?pageno=',$pageno-1,'">&lt;Previous Page</a></span>';
+                echo '<span align="left"><a href="message.phpageno=',$pageno-1,'">&lt;Previous Page</a></span>';
             }
             else{
                 echo'<span style="color: #909090">&lt;Previous Page</span>';
@@ -120,14 +120,14 @@
                     echo '<span>',$i,'</span>';
                 }
                 else{
-                    echo '<span style="padding: 0 2px 0;"><a href="./message.php?pageno=',$i,'">',$i,'</a></span>';
+                    echo '<span style="padding: 0 2px 0;"><a href="message.phpageno=',$i,'">',$i,'</a></span>';
                 }
 
             }
             echo '<span> [ ',$rows,' messages in total ]</span>';
             echo '</div><div id="next-pg">';
             if($pageno!=$pagecount){
-                echo '<span align="right"><a href="./message.php?pageno=',$pageno+1,'">Next Page&gt;</a></span>';
+                echo '<span align="right"><a href="message.phpageno=',$pageno+1,'">Next Page&gt;</a></span>';
             }
             else{
                 echo '<span style="color: #909090; text-align: right;">Next Page&gt;</span>';
@@ -137,7 +137,7 @@
     </div>
   <footer>
       <?php
-      include "footer.html";
+      include "../header_footer/footer.html";
       ?>
   </footer>
 </div>

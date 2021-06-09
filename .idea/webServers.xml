@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="bc08fd90-5494-483a-bcdf-3b2f15bf10cc" name="47.100.93.151" url="47.100.93.151">
-        <fileTransfer rootFolder="/nginx/html/" accessType="SFTP" host="47.100.93.151" port="22" sshConfigId="d15fb69a-dfbd-45bb-bd99-6b396d19ab98" sshConfig="root@47.100.93.151:22 password">
+      <webServer id="bc08fd90-5494-483a-bcdf-3b2f15bf10cc" name="47.100.93.151" url="122.205.95.112">
+        <fileTransfer rootFolder="/var/www" accessType="SFTP" host="122.205.95.112" port="22" sshConfigId="ece8bb8c-a999-4fab-8070-3481705bf941" sshConfig="lifeng@122.205.95.112:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

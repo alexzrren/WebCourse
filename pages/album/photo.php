@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <title>MyBloc</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/photo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/photo.css">
     <title>MyBlog</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css">
 </head>
 <body id="body">
 <div id="page" class="hfeed">
   <header id="branding" role="banner">
       <?php
-      include "header.php"
+      include "../header_footer/header.php"
       ?>
     </div>
 <div class="m-container">
@@ -37,7 +37,7 @@
                 echo '<a href="',$link,'">',$album_name,'<span id="m-img-counts">',$num_photo,'</span></a>';
             }
             else{
-                echo '<div class="m-img"><img src="img/nophoto.jpg" alt="No Photo"></div>';
+                echo '<div class="m-img"><img src="../../img/nophoto.jpg" alt="No Photo"></div>';
                 echo '<div class="m-img-info">';
                 echo '<span>',$album_name,'</span><span id="m-img-counts">',$num_photo,'</span>';
             }
@@ -50,7 +50,7 @@
   </header>
   <footer>
       <?php
-      include "footer.html"
+      include "../header_footer/footer.html";
       ?>
   </footer>
 </div>

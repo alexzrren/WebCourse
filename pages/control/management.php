@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>MyBloc</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <title>MyBlog</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css">
 </head>
 <body id="body">
 <div id="page" class="hfeed" style="overflow: hidden;">
@@ -16,7 +16,7 @@
                 <?php
                 session_start();
                 if(isset($_SESSION['username'])&&$_SESSION['admin']) {
-                    echo '<li><span>Login as:&nbsp;[ADMIN]&nbsp;', $_SESSION['username'], '</span><span style="margin-left: 8px;"><a href="logout.php">LOGOUT</a></span></li>';
+                    echo '<li><span>Login as:&nbsp;[ADMIN]&nbsp;', $_SESSION['username'], '</span><span style="margin-left: 8px;"><a href="../login_register/logout.php">LOGOUT</a></span></li>';
                 }
                 else{
                     echo '<script>alert("Permission Denied! Please Login as Admin!");</script>';
@@ -28,7 +28,7 @@
         </div>
         <hgroup id="header-group">
             <h1 id="site-title"><span style="font-weight: bold; color: whitesmoke;">Control Center</span></h1>
-            <h2 id="site-desc"><a href="index.php">EXIT CONTROL CENTER</a></h2>
+            <h2 id="site-desc"><a href="../../index.php">EXIT CONTROL CENTER</a></h2>
         </hgroup>
         <!-- BEGIN Menu-->
         <!-- END Menu -->

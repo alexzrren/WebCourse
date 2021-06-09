@@ -3,16 +3,16 @@
     <meta charset="UTF-8">
     <title>MyBloc</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/photo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/photo.css">
     <title>MyBlog</title>
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css">
 </head>
 <body id="body">
 <div id="page" class="hfeed">
     <header id="branding" role="banner">
         <?php
-        include "header.php"
+        include "../header_footer/header.php"
         ?>
 </div>
 <!--用于查看单张照片-->
@@ -41,7 +41,7 @@
     </header>
     <footer>
         <?php
-        include "footer.html"
+        include "../header_footer/footer.html"
         ?>
     </footer>
 </div>

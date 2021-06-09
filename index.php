@@ -27,7 +27,7 @@
     <div id="main-body">
         <div id="left-container">
             <div id="left-content">
-                <p class="bar"><a href="about.php">About Me</a></p>
+                <p class="bar"><a href="pages/about/about.php">About Me</a></p>
                 <img id="icon" src="img/icon.jpg">
                 <ul>
                     <li>NAME</li>
@@ -41,7 +41,7 @@
                 </ul>
             </div>
             <div id="left-content2">
-                <p class="bar"><a href="tools.php">Tools</a></p>
+                <p class="bar"><a href="pages/tools.php">Tools</a></p>
 
             </div>
         </div>

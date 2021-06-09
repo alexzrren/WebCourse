@@ -18,7 +18,7 @@
         $fp = fopen("$art_name", 'r');
         $title = fgets($fp);
         echo '<div id="article-navi">';
-        echo '<p>Location&nbsp;&nbsp;&nbsp;<a href="../index.php">Homepage</a>><a href="../articles.php">Articles</a>>',$title,'</p>';
+        echo '<p>Location&nbsp;&nbsp;&nbsp;<a href="../index.php">Homepage</a>><a href="../pages/article/articles.php">Articles</a>>',$title,'</p>';
         echo '</div>';
         echo '<h1 style="text-align: center">',$title,'</h1>';
         $date = fgets($fp);

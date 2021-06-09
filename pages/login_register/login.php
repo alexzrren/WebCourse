@@ -10,14 +10,14 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/signin/">
     <link href="https://cdn.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.8/examples/signin/signin.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <title>Login</title>
 </head>
 
 <body style="background-color: lightsteelblue">
 <div class="sign-in">
     <div class="container">
-        <form class="form-signin" action="./login_check.php" method="post">
+        <form class="form-signin" action="login_check.php" method="post">
             <h2 class="form-signin-heading" style="text-align: center; padding-bottom: 5px; border-bottom: #0a0a0a 2.5px solid; margin-bottom: 40px">LOGIN</h2>
             <input type="text" id="inputUsername" class="form-control" placeholder="Username" style="border-radius: 0" name="username" required autofocus >
             <br>
@@ -45,7 +45,7 @@
     </div> <!-- /container -->
 </div>
 <?php
-include "footer.html"
+include "../header_footer/footer.html"
 ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@bootcss/v3.bootcss.com@1.0.8/assets/js/ie10-viewport-bug-workaround.js"></script>
