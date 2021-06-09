@@ -34,7 +34,7 @@
         $filename=$_GET['photo'];
             $photoname=explode('.',$filename)[0];
             echo '<h1 style="text-align: center">',$photoname,'</h1>';
-            echo '<img src="./photo/',$albumname.'/'.$filename,'">';
+            echo '<img src="../../photo/',$albumname.'/'.$filename,'">';
         ?>
         <p style="color: lightsteelblue; text-align: center; margin-bottom: 2rem">Copyright Reserved, reproduce is prohibited without permission.</p>
     </div>

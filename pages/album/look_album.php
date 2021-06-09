@@ -24,7 +24,7 @@
         <?php
         $albumname=$_GET['albumname'];
         //循环读取相册文件夹中所有照片
-        foreach(glob("./photo/".$albumname.'/*') as $d) {
+        foreach(glob("../../photo/".$albumname.'/*') as $d) {
             $name = explode('/', $d);
             $photo_filename = end($name); //取文件名
             $pn = explode('.', $photo_filename);

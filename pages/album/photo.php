@@ -23,7 +23,7 @@
     </div>
     <div class="m-content">
         <?php
-        foreach(glob("./photo/*") as $d) {
+        foreach(glob("../../photo/*") as $d) {
             $photo_paths=glob($d.'/*');
             $num_photo = count($photo_paths);
             $tmp = explode('/', $d);

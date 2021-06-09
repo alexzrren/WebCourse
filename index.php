@@ -10,7 +10,7 @@
 <body id="body">
 <div id="page" class="hfeed">
     <?php
-    include "./pages/header_footer/header.php"
+    include "header.php"
     ?>
     <div id="search-bar">
         <form method="get" id="search-form" action="index.php">
@@ -41,14 +41,14 @@
                 </ul>
             </div>
             <div id="left-content2">
-                <p class="bar"><a href="pages/tools.php">Tools</a></p>
+                <p class="bar"><a href="pages/tool/tools.php">Tools</a></p>
 
             </div>
         </div>
         <div id="right-container">
             <p class="bar">Recent Posts</a></p>
             <?php
-            include "./pages/article/articlelist.php";
+            include "./pages/article/articlelist_index.php";
             ?>
         </div>
     </div>

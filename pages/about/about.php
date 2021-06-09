@@ -13,7 +13,7 @@
 <div id="page" class="hfeed">
   <header id="branding" role="banner">
       <?php
-      include "header.php"
+      include "../header_footer/header.php"
       ?>
   </header>
     <div id="contact" style="overflow: hidden;">
