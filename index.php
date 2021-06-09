@@ -10,7 +10,7 @@
 <body id="body">
 <div id="page" class="hfeed">
     <?php
-    include "./header.php"
+    include "./pages/header_footer/header.php"
     ?>
     <div id="search-bar">
         <form method="get" id="search-form" action="index.php">
@@ -22,7 +22,7 @@
     </div>
     <?php
 //    roll-img.html中轮播图内容引用自互联网，非原创
-    include "./roll-img.html"
+    include "./pages/roll-img.html"
     ?>
     <div id="main-body">
         <div id="left-container">
@@ -48,12 +48,12 @@
         <div id="right-container">
             <p class="bar">Recent Posts</a></p>
             <?php
-            include "articlelist.php";
+            include "./pages/article/articlelist.php";
             ?>
         </div>
     </div>
     <?php
-    include "./footer.html";
+    include "./pages/header_footer/footer.html";
     ?>
 </div>
 <!--下方bootstrap脚本用于支持轮播图运行-->
