@@ -54,10 +54,7 @@
     <div id="sign-bar" style="margin-top: 20px;">
         <span style="border-bottom: 3px darkblue solid; font-size: 20px; font-weight: bold;">Development Log</span>
     </div>
-    <div id="dev-log" style="height: 350px; border: 3px #0c4128 solid">
-        <h1>Development Log</h1>
-        <p>Still Constructing...</p>
-    </div>
+
   <footer>
       <?php
       include "../header_footer/footer.html"

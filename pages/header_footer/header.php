@@ -29,7 +29,7 @@
         <li><a href="../../index.php" title="home">Home</a></li>
         <li><a href="../article/articles.php" title="Something about course and research">Articles</a></li>
         <li><a href="../album/photo.php" title="Something about my life">Photo</a></li>
-        <li><a href="../tool/tools.php" title="Useful Tools">Tools</a></li>
+<!--        <li><a href="../tool/tools.php" title="Useful Tools">Tools</a></li>-->
         <li><a href="../message/message.php" title="Something you want to say">Message</a></li>
         <li><a href="../about/about.php" title="Something about me">About</a></li>
           <?php
