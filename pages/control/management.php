@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MyBloc</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <title>MyBlog</title>
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/control.css">
+    <link rel="stylesheet" type="text/css" href="../../css/message.css">
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css">
 </head>
 <body id="body">
@@ -20,7 +20,8 @@
                 }
                 else{
                     echo '<script>alert("Permission Denied! Please Login as Admin!");</script>';
-                    header("refresh:0;url=index.php");
+                    header("refresh:0;url=../../index.php");
+                    exit;
                 }
                 ?>
                 <!--      <li><a href="./register.php" title="Register" style="text-decoration: none;">Register</a></li>-->
@@ -30,8 +31,6 @@
             <h1 id="site-title"><span style="font-weight: bold; color: whitesmoke;">Control Center</span></h1>
             <h2 id="site-desc"><a href="../../index.php">EXIT CONTROL CENTER</a></h2>
         </hgroup>
-        <!-- BEGIN Menu-->
-        <!-- END Menu -->
     </header>
     <div id="control-menu">
         <p style="margin: 10px 5px 10px; font-weight: bold; font-size: 20px">Control Menu</p>

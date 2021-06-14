@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MyBloc</title>
-    <meta charset="UTF-8">
+    <title>MyBlog</title>
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
     <link rel="stylesheet" type="text/css" href="../../css/photo.css">
-    <title>MyBlog</title>
     <link rel="stylesheet" type="text/css" href="../../bootstrap/css/bootstrap.css">
 </head>
 <body id="body">

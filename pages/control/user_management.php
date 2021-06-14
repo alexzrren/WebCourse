@@ -27,13 +27,13 @@
         echo '<td>',$row['password'],'</td>';
         if(!$row['admin']){
             echo '<td>N</td>';
-            echo '<td><span><a href="edit_user.php?operation=del&uid=',$uid,'">Del</a></span>';
-            echo '<span style="margin:0 5px 0;"><a href="edit_user.php?operation=adm&uid=',$uid,'">BeAdmin</a></span></td>';
+            echo '<td><span id="mgmt-btn"><a href="edit_user.php?operation=del&uid=',$uid,'">Del</a></span>';
+            echo '<span id="mgmt-btn"><a href="edit_user.php?operation=adm&uid=',$uid,'">BeAdmin</a></span></td>';
         }
         else{
             echo '<td>Y</td>';
-            echo '<td><span>Del</span>';
-            echo '<span style="margin:0 5px 0;">BeAdmin</span></td>';
+            echo '<td><span style="color:darkgray;">Del</span>';
+            echo '<span style="margin:0 5px 0; color:darkgray;">BeAdmin</span></td>';
         }
         echo '</tr>';
     }

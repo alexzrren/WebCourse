@@ -49,3 +49,8 @@
 #next-pg span a{
     text-decoration: none;
 }
+#msg-info-mgmt{
+    font-size:12px;
+    color: dimgrey;
+    margin: 0;
+}

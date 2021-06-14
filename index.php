@@ -83,7 +83,7 @@
                 </ul>
             </div>
             <div id="left-content2">
-                <p class="bar"><a href="pages/tool/tools.php">Tools</a></p>
+                <p class="bar">Tools Shortcut</p>
 
             </div>
         </div>
