@@ -82,10 +82,6 @@
                     <li>(+86)123****1234</li>
                 </ul>
             </div>
-            <div id="left-content2">
-                <p class="bar">Tools Shortcut</p>
-
-            </div>
         </div>
         <div id="right-container">
             <p class="bar">Recent Posts</a></p>

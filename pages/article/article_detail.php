@@ -24,16 +24,15 @@
         $result = mysqli_query($link, $sql);
         $row=mysqli_fetch_assoc($result);
         $fp = fopen("$art_name", 'r');
-        $title = fgets($fp);
         echo '<div id="article-navi">';
         echo '<p>Location&nbsp;&nbsp;&nbsp;<a href="../../index.php">Homepage</a>><a href="articles.php">Articles</a>>',$row['title'],'</p>';
         echo '</div>';
         echo '<h1 style="text-align: center">',$row['title'],'</h1>';
-        $date = fgets($fp);
         echo '<p style="text-align: right; padding-right: 20px;">Date : ',$row['date'],'</p>';
         while(!feof($fp)){
             $cont = fgets($fp);
-            if(feof($fp)) {break;}
+            if(feof($fp)) {$cont = str_replace('\n', '', $cont);
+                echo '<p style="text-indent: 2em;">',$cont,'</p>'; break;}
             $cont = str_replace('\n', '', $cont);
             echo '<p style="text-indent: 2em;">',$cont,'</p>';
             }
