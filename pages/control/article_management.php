@@ -4,9 +4,9 @@
     <form style="margin-left: 20px; padding-bottom: 20px;" method="post" action="article_submit.php">
         <p>
             <span>Article Title</span>
-            <span><input type="text" name="title" maxlength=50 placeholder="title of your article" required id="art-title"></span>
+            <span><input type="text" name="title" maxlength=50 placeholder="Article Title" required id="art-title"></span>
         </p>
-        <p>
+        <p style="margin-bottom: 2px;">
             <span style="margin-right: 16px;">Category</span>
             <select name="category">
                 <option value="学院新闻">学院新闻</option>
@@ -15,6 +15,7 @@
                 <option value="研究动态">研究动态</option>
             </select>
         </p>
-        <textarea id="input-msg" name="message" rows=30 cols="70" placeholder="Something you want to say to me~" autofocus required></textarea>
+        <p style="color: darkgray; font-size: 12px; margin-bottom: 2px;">* Use Enter to goto the next paragraph</p>
+        <textarea id="input-msg" name="content" rows=30 cols="70" placeholder="Article Content" autofocus required></textarea>
         <input type="submit" name="submit" value="Submit Article">
     </form>

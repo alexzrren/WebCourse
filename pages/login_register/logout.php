@@ -5,4 +5,5 @@ $_SESSION = array();
 if(isset($_COOKIE[session_name()])){
     setcookie(session_name(),'',time()-3600, '/');
 }
+echo "<script>alert('Bye!')</script>";
 echo "<script>window.history.back();</script>";
